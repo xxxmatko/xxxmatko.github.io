@@ -36,6 +36,53 @@ h5 {
     text-transform: lowercase;
 }
 
+nav {
+    background: @background-color;
+    box-shadow: none;
+
+    .sidenav {
+        background: @background-color;
+    }
+
+    .user-view {
+        text-align: center;
+        font-size: 3rem;
+        border-bottom: 1px solid fade(@primary-fg-color, 20%);
+        padding-bottom: .5rem !important;
+    }
+
+    a.sidenav-trigger {
+        color: fade(@primary-color, 50%);
+        transition: all .3s ease;
+
+        &:hover {
+            background: transparent;
+            color: fade(@primary-color, 80%);
+        }
+    }
+
+    ul {
+        a {
+            color: fade(@primary-color, 50%) !important;
+            transition: all .3s ease;
+
+            &:hover {
+                background: transparent !important;
+                color: fade(@primary-color, 80%) !important;
+            }
+        }
+    }
+}
+
+.avatar {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-clip: content-box;
+    border: 2px solid @primary-color;
+    padding: .25rem;
+}
+
 .page-footer {
     background: fade(@background-color, 80%);
 

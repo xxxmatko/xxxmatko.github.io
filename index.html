@@ -9,11 +9,41 @@
     <link href="wwwroot/css/site.min.css" rel="stylesheet" />
 </head>
 <body>
+    <nav role="navigation">
+        <div class="nav-wrapper container">
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Me</a>
+                </li>                
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <img class="avatar" src="wwwroot/images/avatar.jpg" alt="Martin Sutka" />
+                    </div>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Me</a>
+                </li>   
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>    
     <div class="section section--inverse">
         <div class="container">
             <br>
             <br>
             <h1 class="center">
+                <img class="avatar" src="wwwroot/images/avatar.jpg" alt="Martin Sutka" />
+                <br>
                 Martin Sutka
             </h1>
             <div class="row center">
@@ -25,7 +55,7 @@
             <br>
         </div>
     </div>
-    <div class="section">
+    <div id="about" class="section">
         <div class="container">
             <h2 class="center">
                 About
@@ -49,7 +79,7 @@
             </div>            
         </div>
     </div>
-    <div class="section">
+    <div id="contact" class="section">
         <div class="container">
             <h2 class="center">
                 Contact Me
@@ -108,5 +138,10 @@
     </footer>    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(function() {
+            $(".sidenav").sidenav();
+        });
+    </script>
 </body>
 </html>
