@@ -22,6 +22,7 @@ h1 {
 h2 {
     font-weight: 600;
     color: @primary-color;
+    text-transform: lowercase;
 }
 
 h4 {
@@ -40,6 +41,29 @@ h5 {
 
     .col {
         text-align: center;
+    }
+
+    .btn-flat {
+        border: 2px solid @secondary-fg-color;
+
+        svg {
+            position: relative;
+            top: 4px;
+
+            path {
+                fill: @secondary-fg-color;
+            }
+        }
+
+        &:hover {
+            background: @secondary-fg-color;
+
+            svg {
+                path {
+                    fill: fade(@background-color, 80%);
+                }   
+            }
+        }
     }
 }
 
