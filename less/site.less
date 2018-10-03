@@ -1,9 +1,49 @@
 @import "mosk";
 
+@primary-color: #ffc107;        // amber
+@secondary-color: #03a9f4;      // light-blue
+@background-color: #212121;     // grey darken-4
+@primary-fg-color: rgba(0, 0, 0, 0.87);
+@secondary-fg-color: rgba(255, 255, 255, 0.87);
+
 html, body {
 	margin: 0;
     padding: 0;
     font-family: "Mosk";
     font-size: 16px;
     font-weight: 400;
+}
+
+h1 {
+    font-weight: 800;
+    color: @primary-color;
+}
+
+h2 {
+    font-weight: 600;
+    color: @primary-color;
+}
+
+h4 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+}
+
+h5 {
+    font-weight: 800;
+    text-transform: lowercase;
+}
+
+.page-footer {
+    background: fade(@background-color, 80%);
+
+    .col {
+        text-align: center;
+    }
+}
+
+.section--inverse {
+    background: @background-color;
+    color: @secondary-fg-color;
 }
