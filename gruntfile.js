@@ -34,7 +34,8 @@ module.exports = function (grunt) {
                 "adjoining-classes": false,
                 "box-model": false,
                 "bulletproof-font-face": false,
-                "font-faces": false
+                "font-faces": false,
+                "important": false
             },
             src: [
                 "wwwroot/css/**/*.css",
