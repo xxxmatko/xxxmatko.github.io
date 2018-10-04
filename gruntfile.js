@@ -37,7 +37,8 @@ module.exports = function (grunt) {
                 "font-faces": false,
                 "important": false,
                 "unique-headings": false,
-                "qualified-headings": false
+                "qualified-headings": false,
+                "overqualified-elements": false
             },
             src: [
                 "wwwroot/css/**/*.css",
