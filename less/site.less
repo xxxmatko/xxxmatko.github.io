@@ -95,7 +95,7 @@ nav {
 
         svg {
             position: relative;
-            top: 4px;
+            top: 5px;
 
             path {
                 fill: @secondary-fg-color;
@@ -117,4 +117,26 @@ nav {
 .section--inverse {
     background: @background-color;
     color: @secondary-fg-color;
+}
+
+.icon-block {
+    padding: 0 15px;
+
+    h5 {
+        font-weight: 400;
+    }
+    
+    .material-icons {
+        font-size: inherit;
+        color: @secondary-color;
+    }
+
+    a {
+        color: @secondary-fg-color;
+        transition: all .3s ease;
+
+        &:hover {
+            color: @secondary-color;
+        }
+    }
 }
