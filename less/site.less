@@ -172,3 +172,32 @@ nav {
         }        
     }
 }
+
+.job-block {
+    h5 {
+        font-weight: 400;
+        text-transform: none;
+
+        small {
+            color: fade(@primary-fg-color, 50%);
+            font-weight: 200;
+            display: block;
+
+            strong {
+                display: block;
+                font-size: 60%;
+            }
+        }
+    }
+
+    .badge {
+        float: none;
+        display: inline-block;
+        margin-left: 0;
+        background: @secondary-color !important;
+
+        &::after {
+            content: "" !important;
+        }
+    }
+}
