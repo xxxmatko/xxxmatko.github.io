@@ -120,7 +120,38 @@ nav {
 }
 
 .icon-block {
-    padding: 0 15px;
+    color: @secondary-fg-color;
+    position: relative;
+    display: block;
+    padding: 1rem .5rem;
+
+    &::before {
+        content: "\00a0";
+        display: block;
+        position: absolute;
+        background: @secondary-color;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;     
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
+    &::after {
+        content: "\E8FF";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        font-family: "Material Icons";
+        text-align: center;
+        transform: translate(0,-50%);
+        font-size: 5rem;
+        opacity: 0;
+        transition: all .3s ease;
+    }    
 
     h5 {
         font-weight: 400;
@@ -131,12 +162,13 @@ nav {
         color: @secondary-color;
     }
 
-    a {
-        color: @secondary-fg-color;
-        transition: all .3s ease;
-
-        &:hover {
-            color: @secondary-color;
+    &:hover {
+        &::before {
+            opacity: .8;      
         }
+
+        &::after {
+            opacity: 1;
+        }        
     }
 }
